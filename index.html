@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Web Page</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+    <header class="top-menu">
+        <div>
+            <p>Monday, 29 April 2019</p>
+        </div>
+        <div>
+            <p></p>
+            <i class="fa fa-search"></i>
+            <input type="text" name="search"  id="search-field" placeholder="Search..." class="form-control"/>
+            <input type="button" name="btn-search" id="search-btn" value="Search">
+            <p></p>
+        </div>
+    </header> 
+    <div class="bottom-line">
+        <p></p>
+    </div>
+    <div class="title">
+        <h1>HELLO WORLD</h1>
+    </div>
+    <div class="subtitle">
+        <h2>Newspaper/ Magazine /Publisher</h2>
+    </div>
+    
+    <main class="main">
+        <div class="main bottom-line">
+            <p></p>
+        </div>
+        <div class="main-sources" id="resources">
+        </div>
+        <div class="main-news" id="news">
+
+        </div>
+        <h2 class="main-error" id="error-block" style="display: none;">There are no articles matching your request<p></p></h2>
+        <input type="button" class="more-btn" id="loadButton" value="Load more">
+    </main>
+
+    <template id="news-template">
+        <div class="news-template__item">
+            <div class="news-template__item news__picture">
+                
+            </div>
+            <div class="news__content">
+                <h2 class="news__title"></h2>
+                <h3 class="news__source"></h3>
+                <p class="news__text"></p>
+                <a class="news__link" href="#">Read more...</a>
+            </div>
+        </div>
+    </template>
+    <script type="text/javascript" src="./lib/main.js"></script>
+</body>
