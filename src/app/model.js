@@ -1,11 +1,11 @@
 import View from './view';
-let view = new View(); 
 
 export default class Model{
     constructor(){  
         this.lastAPIUrl = '';
         this.pageToShow = 0;
         this.newsDisplayed = 0;
+        this.view = new View();
     }
 
     getNewsResources(){
@@ -13,10 +13,10 @@ export default class Model{
         let request = new Request(newsAPIUrl);
 
         fetch(request)
-          .then(function(response) { 
+          .then((response) => { 
               return response.json(); 
             })
-          .then(function(data) {
+          .then((data) => {
             for (let i = 0; i < data.sources.length; i++) {
               document.querySelector('#resources').innerHTML +=
                '<button class="btn btn__sources" id="' + data.sources[i].id + '">' 
@@ -32,10 +32,10 @@ export default class Model{
 
         let currThis = this;
         fetch(request)
-          .then(function(response) { 
+          .then((response) => { 
                 return response.json(); 
             })
-          .then(function(data) {
+          .then((data) => {
 
             const newsCount = data.articles.length;
             const newsItems = document.querySelector('#news');
@@ -47,7 +47,7 @@ export default class Model{
                 return;
             }      
 
-            const renderedItems = view.renderItems(newsCount, data.articles);
+            const renderedItems = currThis.view.renderItems(newsCount, data.articles);
             newsItems.appendChild(renderedItems);
 
             const minDisplayedNews = 5;
@@ -68,17 +68,17 @@ export default class Model{
 
         var currThis = this;
         fetch(request)
-          .then(function(response) { 
+          .then((response) => { 
               return response.json(); 
             })
-          .then(function(data) {
+          .then((data) => {
             const newsCount = data.articles.length;
             if(newsCount == 0){
                 document.querySelector('#loadButton').style.display = 'none';
                 return;
             }    
 
-            const renderedItems = view.renderItems(newsCount, data.articles);
+            const renderedItems = currThis.view.renderItems(newsCount, data.articles);
             const newsItems = document.querySelector('#news');
             newsItems.appendChild(renderedItems);
 
