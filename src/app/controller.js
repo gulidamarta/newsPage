@@ -26,7 +26,7 @@ export default class Controller{
         });
           
         document.querySelector('#search-field')
-              .addEventListener('keyup', function(event) {
+              .addEventListener('keyup', (event) => {
               event.preventDefault();
               if (event.keyCode === 13) {
                   document.querySelector('#search-btn').click();
