@@ -69,14 +69,14 @@ body{
     text-align: center;
 }
 
-.main-news{
+.content-news{
     display: flex;
     flex-direction: column;
     width: 50%;
     margin-left: 25%;
 }
 
-.main-error{
+.content-error{
     font-size: 18px;
     font-weight: 100;
     color: #444444;
@@ -88,7 +88,7 @@ body{
     color: #6e6767;
 }
 
-.main-sources{
+.content-sources{
     display: flex;
     flex-wrap: nowrap;
     height: 50px;
@@ -100,20 +100,20 @@ body{
 }
   
 /* область по которой ползает ползунок*/
-.main-sources::-webkit-scrollbar-track{
+.content-sources::-webkit-scrollbar-track{
     border-radius: 8px;
     background-color: white;
     width: 75%;  
     box-shadow: inset 0 0 6px rgba(83, 79, 79, 0.3); 
 }
   
-.main-sources::-webkit-scrollbar{
+.content-sources::-webkit-scrollbar{
     width: 20px;
     background-color: #7e7a7a;
 }
   
 /* ползунок scrollbar'а*/
-.main-sources::-webkit-scrollbar-thumb{
+.content-sources::-webkit-scrollbar-thumb{
     border-radius: 8px;
     box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
     background-color: #F5F5F5;
