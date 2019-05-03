@@ -9,8 +9,8 @@ export default class Model{
     processNewsResources(data){
       for (let i = 0; i < data.sources.length; i++) {
         document.querySelector('#resources').innerHTML +=
-         '<button class="btn btn__sources" id="' + data.sources[i].id + '">' 
-         + data.sources[i].name + '</button>';
+         `<button class="btn btn__sources" id="` + data.sources[i].id + `">` 
+         + data.sources[i].name + `</button>`;
       } 
     }
 
