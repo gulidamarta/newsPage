@@ -1,5 +1,5 @@
 {
-  "name": "martahelp",
+  "name": "newsApi",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
     "start": "npm run webpack && npm run open",
     "open": "start ./index.html"
   },
-  "author": "ZakharKot",
+  "author": "MartaGulida",
   "license": "ISC",
   "babel": {
     "presets": [
